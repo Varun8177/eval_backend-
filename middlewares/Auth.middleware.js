@@ -9,7 +9,7 @@ const Auth = (req, res, next) => {
                 message: err.message
             })
         } else {
-            req.userID = decoded.userID
+            req.body.userID = decoded.userID
             next()
         }
     });
